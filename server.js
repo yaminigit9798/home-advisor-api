@@ -95,10 +95,7 @@ app.get('/products', (req, res) => {
     return keywordMatch && priceMatch && categoryMatch;
   });
 
-  res.json({
-    count: results.length,
-    products: results
-  });
+  res.json(results);
 });
 
 app.get('/', (req, res) => {
